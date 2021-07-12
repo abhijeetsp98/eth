@@ -1,0 +1,37 @@
+<%- include('./partials/header') -%>
+
+<div class="ui main text container">
+    <div class="ui huge header">BlockChain</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% var index=0; words.forEach(function(word){  %>
+                <div class="item">
+                    <div class="content">
+                        <a class="header" >Block <%= index %></a>
+                        <div class="description">
+                            <p><%- word.timestamp %></p>
+                        </div>
+                        <div class="meta">
+                            <p>Previous Block Hash</p>
+                            <span><%= word.previousHash %></span>
+                        </div>
+                        <div class="meta">
+                            <p>Block Hash</p>
+                            <span><%= word.hash %></span>
+                        </div>
+                        
+                        <div class="extra">
+                            <a class="ui floated inverted blue button" href="/block/<%= index %>">
+                                Read Data
+                                <i class="right chevron icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            <% index++; }) %>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,77 @@
+<%- include('./partials/header') -%>
+
+<div  class="ui main text container segment">
+    <div class="ui huge header">Timestamp </div>
+    <div class="ui top attached segment">
+        <div class="field">
+                <h1>Location</h1>
+                <table class="ui blue selectable inverted table">
+                    <tbody>
+                      <tr>
+                        <td>District</td>
+                        <td><%= loc.district %></td>
+                      </tr>
+                      <tr>
+                        <td>Taluka</td>
+                        <td><%= loc.taluka %></td>
+                      </tr>
+                      <tr>
+                        <td>Village</td>
+                        <td><%= loc.village %></td>
+                      </tr>
+                      <tr>
+                        <td>Khasra Number</td>
+                        <td><%= loc.khatraNo %></td>
+                      </tr>
+                      <tr>
+                        <td>Layout Number</td>
+                        <td><%= loc.layoutNo %></td>
+                      </tr>
+                      <tr>
+                        <td>Nagar</td>
+                        <td><%= loc.nagar %></td>
+                      </tr>
+                    </tbody>
+                </table>
+
+
+
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="ui top attached segment">
+      <<h1>Seller Buyer Details</h1>
+      <div class="ui divided items">
+        <%  results.forEach(function(result){   %>
+          <table class="ui black inverted selectable  table">
+            <tbody>
+              <tr>
+                <td>Seller</td>
+                <td><%= result.seller %></td>
+              </tr>
+              <tr>
+                <td>Buyer</td>
+                <td><%= result.buyer %></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td><%= result.date %></td>
+              </tr>
+              <tr>
+                <td>From Address</td>
+                <td><%= result.fromAddress %></td>
+              </tr>
+              <tr>
+                <td>To Address</td>
+                <td><%= result.toAddress %></td>
+              </tr>
+            </tbody>
+        </table>
+        <%  }) %>
+    </div>
+</div>
+
+
+<%- include('./partials/footer') -%>

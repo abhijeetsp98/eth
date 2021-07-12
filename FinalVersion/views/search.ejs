@@ -1,0 +1,36 @@
+<%- include('./partials/header') -%>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Enter the relevant details of Land </div>
+    <form class="ui form" action="/result" method="POST">
+        <div class="field">
+            <label>District</label>
+            <input type="text" name="location[district]" placeholder="District">
+        </div>
+        <div class="field">
+            <label>Taluka</label>
+            <input type="text" name="location[taluka]" placeholder="Taluka">
+        </div>
+
+        <div class="field">
+            <label>Village</label>
+            <input type="text" name="location[village]" placeholder="Village">
+        </div>
+        <div class="field">
+            <label>Khasra Number</label>
+            <input type="text" name="location[khatraNo]" placeholder="Khasra Number">
+        </div>
+        <div class="field">
+            <label>Layout Number</label>
+            <input type="text" name="location[layoutNo]" placeholder="layout Number">
+        </div>
+        <div class="field">
+            <label>Nagar</label>
+            <input type="text" name="location[nagar]" placeholder="Nagar">
+        </div>
+
+        <input class="ui violet inverted button" type="submit" value="Search For Ownership"> 
+    </form>
+</div>
+
+<%- include('./partials/footer') -%>

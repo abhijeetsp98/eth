@@ -1,0 +1,72 @@
+<%- include('./partials/header') -%>
+
+<div  class="ui main text container segment" floated="right">
+    <div class="ui huge header">Date <%= word.timestamp %></div>
+    <div class="ui top attached segment">
+        <div class="field">
+            <h1>Previous Hash</h1>
+            <p><%= word.previousHash %></p>
+            <h1>Block Hash</h1>
+            <p><%= word.hash %></p>
+            <h1>Nonce</h1>
+            <p><%= word.nonce %></p>
+            <div class="ui top attached segment">
+                <h1>Location</h1>
+                <table class="ui inverted table">
+                    <tbody>
+                      <tr>
+                        <td>District</td>
+                        <td><%= word.transaction.location.district %></td>
+                      </tr>
+                      <tr>
+                        <td>Taluka</td>
+                        <td><%= word.transaction.location.taluka %></td>
+                      </tr>
+                      <tr>
+                        <td>Village</td>
+                        <td><%= word.transaction.location.village %></td>
+                      </tr>
+                      <tr>
+                        <td>Khatra Number</td>
+                        <td><%= word.transaction.location.khatraNo %></td>
+                      </tr>
+                      <tr>
+                        <td>Layout Number</td>
+                        <td><%= word.transaction.location.layoutNo %></td>
+                      </tr>
+                      <tr>
+                        <td>Nagar</td>
+                        <td><%= word.transaction.location.nagar %></td>
+                      </tr>
+                    </tbody>
+                </table>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui top attached segment">
+<h1>Details of seller and owner </h1>
+                <table class="ui selectable inverted blue table">
+                    <tbody>
+                      <tr>
+                        <td>Seller Name</td>
+                        <td><%= word.transaction.ownership.seller %></td>
+                      </tr>
+                      <tr>
+                        <td>Seller Public Key</td>
+                        <td><%= word.transaction.ownership.fromAddress %></td>
+                      </tr>
+                      <tr>
+                        <td>Buyer</td>
+                        <td><%= word.transaction.ownership.buyer %></td>
+                      </tr>
+                      <tr>
+                        <td>Buyer Public Key</td>
+                        <td><%= word.transaction.ownership.toAddress %></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+<%- include('./partials/footer') -%>
